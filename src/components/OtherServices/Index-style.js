@@ -26,3 +26,4 @@ export const FeaturesContainer = styled.div`
     margin: 3rem 0;
   }
 `;
+

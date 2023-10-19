@@ -4,11 +4,11 @@ import Printer from "../../Assets/printer.png";
 import InfinityIcon from "../../Assets/infinity.png";
 import Meter from "../../Assets/meter.png";
 import Partners from "./Partners/Partners";
-import { QuoteContainer, Writer, Quote, CardsContainer } from "./index-style";
+import { QuoteContainer, Writer, Quote, CardsContainer,MainServicesContainer } from "./index-style";
 
 const index = () => {
   return (
-    <div className="services_customer_container">
+    <MainServicesContainer className="services_customer_container">
       {/* <!-- services --> */}
       <div className="content_area">
         <div>
@@ -55,7 +55,7 @@ const index = () => {
       </QuoteContainer>
       {/* <!-- logos container --> */}
       <Partners />
-    </div>
+    </MainServicesContainer>
   );
 };
 

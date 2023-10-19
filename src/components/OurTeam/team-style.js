@@ -5,6 +5,10 @@ export const TeamContainer = styled.div`
   padding: 2rem 0;
   overflow-x: auto;
   scroll-snap-type: x proximity;
+
+  @media screen and (min-width:769px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const TeamMember = styled.div`

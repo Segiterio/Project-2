@@ -6,6 +6,11 @@ export const LogoContainer = styled.div`
   font-size: 0.8rem;
   gap: 0.4rem;
   font-weight: 700;
+
+  @media screen and (min-width:769px) {
+    font-size: 1rem;
+    gap: .8rem;
+  }
 `;
 
 export const MenuContainer = styled.nav`
@@ -20,8 +25,8 @@ export const MenuContainer = styled.nav`
     }
 
     & > *:hover {
-         text-decoration: underline;
-         text-underline-offset: .2rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
     }
   }
 `;
@@ -41,11 +46,21 @@ export const GetStaredBtn = styled.div`
     position: absolute;
     bottom: -0.4rem;
   }
+
+  & > button {
+    border: none;
+    background-color: transparent;
+  }
+
+   @media screen and (min-width:769px) {
+    font-size: 1rem;
+    margin-left: 1rem;
+   }
 `;
 
 export const LoginBtn = styled.button`
-    border:none;
-    background-color: transparent;
-    font-weight: 500;
-    font-size: .8rem;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 0.8rem;
 `;

@@ -1,10 +1,24 @@
 import styled from "styled-components";
 
+export const MainServicesContainer = styled.div`
+  background-color: rgba(255, 245, 237, .5);
+  padding-top: 6rem;
+  display: flex;
+  position: relative;
+  bottom: 4rem;
+  flex-direction: column;
+
+`
+
 export const QuoteContainer = styled.div`
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width:769px){
+    padding: 6rem 0;
+  }
 `;
 
 export const Writer = styled.p`
