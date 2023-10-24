@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const OtherServicesContainer = styled.section`
-  background-color: rgba(249, 250, 252, 1);
+  background-color: #ff6666;
   padding: 2rem 0;
 
   @media screen and (min-width: 769px) {
-       padding: 4rem 0;
-    }
+    padding: 4rem 0;
+  }
 `;
 
 export const FeaturesContainer = styled.div`
@@ -26,4 +26,3 @@ export const FeaturesContainer = styled.div`
     margin: 3rem 0;
   }
 `;
-

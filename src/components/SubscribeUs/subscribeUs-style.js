@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #f8f0ea;
+  background-color: #1e90ff;
   padding: 5rem 0;
   position: relative;
 `;
@@ -61,15 +61,15 @@ export const Ballons = styled.img`
 `;
 
 export const SubscribeBtn = styled.button`
-  background-color: #DB4A87;
-  padding: .4rem 1rem;
+  background-color: #db4a87;
+  padding: 0.4rem 1rem;
   color: white;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 700;
-  border:none;
+  border: none;
 
-  @media screen and (min-width: 769px){
-    padding: .8rem 2rem;
+  @media screen and (min-width: 769px) {
+    padding: 0.8rem 2rem;
   }
- `
+`;

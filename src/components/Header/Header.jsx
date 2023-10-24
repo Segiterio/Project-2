@@ -26,7 +26,7 @@ const Header = () => {
         <LoginBtn>Login</LoginBtn>
         <GetStaredBtn>
           <button>Get Started</button>
-          <img src={Path_49} alt="underline" />
+          {/* <img src={Path_49} alt="underline" /> */}
         </GetStaredBtn>
       </div>
     </header>

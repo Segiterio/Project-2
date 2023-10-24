@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 export const MainServicesContainer = styled.div`
-  background-color: rgba(255, 245, 237, .5);
+  background-color: #1e90ff;
   padding-top: 6rem;
   display: flex;
   position: relative;
   bottom: 4rem;
   flex-direction: column;
-
-`
+  h2 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+`;
 
 export const QuoteContainer = styled.div`
   padding: 4rem 0;
@@ -16,7 +21,7 @@ export const QuoteContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width:769px){
+  @media screen and (min-width: 769px) {
     padding: 6rem 0;
   }
 `;
@@ -28,6 +33,7 @@ export const Writer = styled.p`
 `;
 
 export const Quote = styled.blockquote`
+  color: white;
   font-size: 1.25rem;
   line-height: 2;
   text-align: left;

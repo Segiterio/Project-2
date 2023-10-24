@@ -11,6 +11,7 @@ export const Card = styled.div`
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  color: white;
 `;
 export const ServiceTitle = styled.div`
   font-size: 1rem;

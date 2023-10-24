@@ -14,7 +14,7 @@ export const HeroContainer = styled.section`
   }
 
   @media screen and (min-width: 769px) {
-     padding:4rem 0;
+    padding: 4rem 0;
   }
 `;
 
@@ -26,7 +26,7 @@ export const HeroImageContainer = styled.div`
 
   & > button {
     padding: 0.8rem 2rem;
-    background-color: var(--Green_gray);
+    background-color: #1e90ff;
     color: white;
     border-radius: 5px;
     font-size: 0.875rem;

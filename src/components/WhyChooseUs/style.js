@@ -20,8 +20,7 @@ export const Title = styled.div`
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   color: ${({ $active }) => ($active ? "white" : "black")};
-  background-color: ${({ $active }) =>
-    $active ? "rgb(204, 204, 72)" : "white"};
+  background-color: ${({ $active }) => ($active ? "#1e90ff" : "white")};
 `;
 
 export const ExplanationContainer = styled.div`
@@ -71,11 +70,11 @@ export const ExplainHeading = styled.h3`
 `;
 
 export const ExploreBtn = styled.button`
-  border :none ;
+  border: none;
   background-color: transparent;
-  color:#3183ff;
+  color: #3183ff;
   cursor: pointer;
   &:hover {
-     text-decoration: underline;
+    text-decoration: underline;
   }
- ` 
+`;
