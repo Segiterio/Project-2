@@ -2,7 +2,7 @@ import React from 'react'
 import HeroImage from "../../Assets/Hero.svg"
 import { HeroContainer,HeroImageContainer } from './style-hero'
 
-const Hero = () => {
+const Hero = ({setModal}) => {
   return (
     <HeroContainer className="content_area">
     <h1>
@@ -12,7 +12,9 @@ const Hero = () => {
 
     <HeroImageContainer>
       <img src={HeroImage} width="100%" alt="heroImage" />
-      <button type="button">Get Started</button>
+      <button type="button" onClick={() => {
+        setModal(true) 
+      }}>Get Started</button>
     </HeroImageContainer>
   </HeroContainer>
   )

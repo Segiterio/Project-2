@@ -21,27 +21,35 @@ export const Privacy = styled.div`
 
 export const FooterTitle = styled.div`
   flex-grow: 1;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-size: 900;
   font-family: "DM sans";
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: #0f2137;
   white-space: nowrap;
+
+  &:hover {
+     text-decoration: underline;
+     text-underline-offset:4px;
+  }
 `;
 
 export const FooterLinksContainer = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 1rem;
-  white-space: nowrap;
   color: #0f2137;
   opacity: 0.8;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
-export const SocialLinks = styled.div`
+export const SocialLinks = styled.a`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 0.4rem;
+  text-decoration: none;
+  color:black;
 `;

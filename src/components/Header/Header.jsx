@@ -1,13 +1,7 @@
 import React from "react";
 import Logo from "../../Assets/Logo.png";
-import Path_49 from "../../Assets/Path_49.svg";
-import {
-  LogoContainer,
-  MenuContainer,
-  GetStaredBtn,
-  LoginBtn,
-} from "./header-style";
-const Header = () => {
+import { LogoContainer, MenuContainer, BookDemoBtn } from "./header-style";
+const Header = ({setModal}) => {
   return (
     <header className="content_area vertically_center">
       <div className="vertically_center">
@@ -22,13 +16,15 @@ const Header = () => {
           <div>About</div>
         </MenuContainer>
       </div>
-      <div className="vertically_center">
+      {/* <div className="vertically_center">
         <LoginBtn>Login</LoginBtn>
         <GetStaredBtn>
           <button>Get Started</button>
-          {/* <img src={Path_49} alt="underline" /> */}
         </GetStaredBtn>
-      </div>
+      </div> */}
+      <BookDemoBtn onClick={() => {
+         setModal(true);
+      }} >Book Demo</BookDemoBtn>
     </header>
   );
 };

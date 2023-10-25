@@ -147,6 +147,10 @@ footer {
   justify-content: space-between;
 }
 
+.overflow-hidden {
+   overflow-x: hidden;
+}
+
 @media screen and (min-width:769px) {
   h1 {
     font-size: 2.25rem;
@@ -157,4 +161,35 @@ footer {
   h2 {
     font-size: 1.8rem;
   }
+}
+
+.mask {
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.cross {
+   cursor: pointer;
+}
+
+.cross:hover {
+   color:red
 }

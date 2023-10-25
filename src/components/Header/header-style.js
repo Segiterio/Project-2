@@ -31,36 +31,51 @@ export const MenuContainer = styled.nav`
   }
 `;
 
-export const GetStaredBtn = styled.div`
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--Green_gray);
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+// export const GetStaredBtn = styled.div`
+//   margin-left: 0.5rem;
+//   font-size: 0.8rem;
+//   color: var(--Green_gray);
+//   font-weight: 700;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: relative;
 
-  & > img {
-    width: 100%;
-    position: absolute;
-    bottom: -0.4rem;
+//   & > img {
+//     width: 100%;
+//     position: absolute;
+//     bottom: -0.4rem;
+//   }
+
+//   & > button {
+//     border: none;
+//     background-color: transparent;
+//   }
+
+//    @media screen and (min-width:769px) {
+//     font-size: 1rem;
+//     margin-left: 1rem;
+//    }
+// `;
+
+// export const LoginBtn = styled.button`
+//   border: none;
+//   background-color: transparent;
+//   font-weight: 500;
+//   font-size: 0.8rem;
+// `;
+
+export const BookDemoBtn = styled.div`
+  padding:.3rem .6rem ;
+  border:1px solid;
+  background-color: #1e90ff;
+  color:white;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: scale 150ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+     scale: 95%;
   }
-
-  & > button {
-    border: none;
-    background-color: transparent;
-  }
-
-   @media screen and (min-width:769px) {
-    font-size: 1rem;
-    margin-left: 1rem;
-   }
-`;
-
-export const LoginBtn = styled.button`
-  border: none;
-  background-color: transparent;
-  font-weight: 500;
-  font-size: 0.8rem;
-`;
+`

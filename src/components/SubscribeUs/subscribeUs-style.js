@@ -12,7 +12,7 @@ export const ContentContainer = styled.div`
   width: 95%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 5px;
@@ -61,13 +61,15 @@ export const Ballons = styled.img`
 `;
 
 export const SubscribeBtn = styled.button`
-  background-color: #db4a87;
+  background-color: #1e90ff;
   padding: 0.4rem 1rem;
   color: white;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 700;
   border: none;
+  white-space: nowrap;
+  cursor: pointer;
 
   @media screen and (min-width: 769px) {
     padding: 0.8rem 2rem;

@@ -3,7 +3,6 @@ import ServiceCard from "../Templates/ServiceCard";
 import Printer from "../../Assets/printer.png";
 import InfinityIcon from "../../Assets/infinity.png";
 import Meter from "../../Assets/meter.png";
-import Partners from "./Partners/Partners";
 import {
   QuoteContainer,
   Writer,

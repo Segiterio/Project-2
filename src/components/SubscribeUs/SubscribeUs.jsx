@@ -6,41 +6,20 @@ import Group_2 from "../../Assets/decoration/Group_2.svg";
 import Group_73 from "../../Assets/decoration/Group_73.svg";
 import { Container, Strips1, Strips2,ContentContainer,Books,Ballons,Cactus,SubscribeBtn } from "./subscribeUs-style";
 
-const SubscribeUs = () => {
+const SubscribeUs = ({setModal}) => {
   return (
     <Container>
       <ContentContainer>
         <div>
-          <h3 className="heading">Like our service? Subscribe us</h3>
+          <h3 className="heading">Like our service? Book Demo</h3>
           <div className="para">
             We have more than thousand of creative entrepreneurs and stat
             joining our business
           </div>
         </div>
-        <div>
-          <form action="">
-            <div className="field_container">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Email Address"
-              />
-
-              <SubscribeBtn>Subscribe</SubscribeBtn>
-            </div>
-            <div className="vertically_center">
-              <input
-                type="checkbox"
-                name="additional_messages"
-                id="additional_messages"
-              />
-              <label htmlFor="additional_messages">
-                Don't provide any promotional message.
-              </label>
-            </div>
-          </form>
-        </div>
+        <SubscribeBtn onClick={() => {
+           setModal(true)
+        }}>Book Your Demo</SubscribeBtn>
       </ContentContainer>
 
       <Books src={Group_73} alt="" className="books" />

@@ -37,6 +37,7 @@ export const HeroImageContainer = styled.div`
     transform: translate(-50%);
     white-space: nowrap;
     border: none;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 769px) {
