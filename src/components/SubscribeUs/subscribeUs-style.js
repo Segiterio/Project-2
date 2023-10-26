@@ -12,7 +12,7 @@ export const ContentContainer = styled.div`
   width: 95%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 5px;
@@ -24,6 +24,13 @@ export const ContentContainer = styled.div`
   @media screen and (min-width: 769px) {
     flex-direction: row;
     padding: 1.5rem;
+  }
+  .heading {
+    font-weight: 700;
+    font-size: 25px;
+    @media screen and (min-width: 920px) {
+      font-size: 20px;
+    }
   }
 `;
 

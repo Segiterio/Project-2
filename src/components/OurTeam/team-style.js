@@ -1,15 +1,4 @@
 import styled from "styled-components";
-// export const TeamContainer = styled.div`
-//   display: flex;
-//   gap: 1.4rem;
-//   padding: 2rem 0;
-//   overflow-x: auto;
-//   scroll-snap-type: x proximity;
-
-//   @media screen and (min-width:769px) {
-//     padding: 4rem 0;
-//   }
-// `;
 
 export const TeamMember = styled.div`
   padding: 0.5rem;
@@ -30,7 +19,21 @@ export const TeamMember = styled.div`
     gap: 1rem;
   }
 `;
-
+export const TeamStyle = styled.div`
+  .title {
+    font-weight: 700;
+    font-size: 25px;
+    @media (max-width: 920px) {
+      font-size: 18px;
+    }
+  }
+  .sub__title {
+    font-weight: 400;
+    font-size: 15px;
+    @media (max-width: 920px) {
+    }
+  }
+`;
 export const Name = styled.div`
   font-size: 1.25rem;
   font-weight: 500;
