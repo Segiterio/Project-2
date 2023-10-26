@@ -13,7 +13,7 @@ const mailSender = async (email, title, body) => {
     let resposneEmail = await transporter.sendMail({
       from: {
         name:"Skills Ladder Academy",
-        address:"ak7859437@gmail.com"
+        address:process.env.MAILUSER,
       },
       to: `${email}`,
       subject: `${title}`,
