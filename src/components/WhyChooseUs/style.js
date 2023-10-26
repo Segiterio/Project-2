@@ -15,12 +15,13 @@ export const TitlesContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  border-radius: 20px;
-  box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 0.4rem 0.8rem;
   cursor: pointer;
-  color: ${({ $active }) => ($active ? "white" : "black")};
-  background-color: ${({ $active }) => ($active ? "#1e90ff" : "white")};
+  border-bottom: 4px solid ${({ $active }) => ($active ? "#1e90ff" : "white")};
+ transition: border-bottom 150ms ease-in-out;
+  &:hover {
+     border-bottom:4px solid ${({ $active }) => ($active ? "null" : "red")};
+  }
 `;
 
 export const ExplanationContainer = styled.div`

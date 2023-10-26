@@ -27,8 +27,8 @@ const Team = () => {
     <TeamStyle>
       <section className="content_area">
         <div>
-          <h2 className="title">Meet our superheros</h2>
-          <p className="sub__title">
+          <h2>Meet our superheros</h2>
+          <p>
             Build an incredible workplace and grow your business with Gusto's
             all-in-one platform with amazing contents.
           </p>

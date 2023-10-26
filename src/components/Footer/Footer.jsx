@@ -1,23 +1,27 @@
 import React from "react";
-import Logo from "../../Assets/Logo.png";
+import BrandLogo from "../../Assets/brandlogo.png";
 import {
   FooterLogoContainer,
   Privacy,
   Copyright,
   FooterTitle,
   SocialLinks,
-  FooterLinksContainer
+  FooterLinksContainer,
 } from "./footer-style";
 
-import {AiFillGithub,AiFillFacebook,AiFillTwitterCircle,AiFillDribbbleCircle} from "react-icons/ai"
+import {
+  AiFillFacebook,
+  AiFillTwitterCircle,
+} from "react-icons/ai";
+
+import {FaLinkedin,FaInstagram} from "react-icons/fa"
 
 const Footer = () => {
   return (
     <footer className="content_area">
-      <FooterLogoContainer className="footer_logo_contaniner">
-        <div className="vertically_center logo_container">
-          <img src={Logo} alt="" />
-          <p>StartupLanding</p>
+      <FooterLogoContainer>
+        <div className="vertically_center ">
+          <img src={BrandLogo} alt="brandLogo" />
         </div>
         <Privacy>Terms of use | Privacy</Privacy>
         <Copyright>Copyright by 2019 YourName, Inc</Copyright>
@@ -28,24 +32,19 @@ const Footer = () => {
         <FooterTitle>Supports</FooterTitle>
         <FooterTitle>About</FooterTitle>
       </div>
-
       <div>
         <FooterLinksContainer>
-          <SocialLinks className="social_links" href="https://www.facebook.com" target="_blank">
-            <AiFillFacebook color="#0000FF" size={30} />
-            <p>Facebook</p>
+          <SocialLinks href="https://www.facebook.com" target="_blank">
+            <AiFillFacebook color="#316FF6" size={40} />
           </SocialLinks>
-          <SocialLinks className="social_links">
-           <AiFillTwitterCircle size={30} color="#26a7de"/>
-            <p>Twitter</p>
+          <SocialLinks href="https://www.twitter.com" target="_blank">
+            <AiFillTwitterCircle size={40} color="#26a7de" />
           </SocialLinks>
-          <SocialLinks className="social_links" href="https://www.github.com" target="_blank">
-           <AiFillGithub size={30} color="#2b3137"/>
-            <p>Github</p>
+          <SocialLinks href="https://www.github.com" target="_blank">
+            <FaInstagram size={40} color="#d62976" />
           </SocialLinks>
-          <SocialLinks className="social_links" href="https://www.dribbble.com" target="_blank" >
-           <AiFillDribbbleCircle size={30} color="#ea4c89"/>
-            <p>Dribbble</p>
+          <SocialLinks href="https://www.linkedin.com" target="_blank">
+            <FaLinkedin size={40} color="#0077b5" />
           </SocialLinks>
         </FooterLinksContainer>
       </div>

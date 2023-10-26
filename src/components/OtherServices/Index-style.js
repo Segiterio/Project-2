@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+
+export const HeadingContainer = styled.div`
+  color:white
+`
 export const OtherServicesContainer = styled.section`
   background-color: #ff6666;
   padding: 2rem 0;

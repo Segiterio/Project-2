@@ -1,5 +1,6 @@
 import React from "react";
 import { LearnBtn,Card,ServiceTitle } from "./serviceCard-style";
+import { FaAngleRight } from "react-icons/fa";
 
 const ServiceCard = ({ Image, title, para, isContentLarge }) => {
   return (
@@ -8,7 +9,7 @@ const ServiceCard = ({ Image, title, para, isContentLarge }) => {
       <div className="card_details">
         <ServiceTitle className="services_title">{title}</ServiceTitle>
         <p>{para}</p>
-        {isContentLarge && <LearnBtn>Learn more</LearnBtn>}
+        {isContentLarge && <LearnBtn><span>Learn more</span><FaAngleRight /></LearnBtn>}
       </div>
     </Card>
   );

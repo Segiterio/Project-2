@@ -6,19 +6,19 @@ import Lego from "../../Assets/lego.png";
 import Link from "../../Assets/link.png";
 import Vertical_bars from "../../Assets/vertical_bars.png";
 import ServiceCard from "../Templates/ServiceCard";
-import { OtherServicesContainer,FeaturesContainer } from "./Index-style";
+import { OtherServicesContainer,FeaturesContainer,HeadingContainer } from "./Index-style";
 
 const Index = () => {
   return (
     <OtherServicesContainer>
       <div className="content_area">
-        <div>
+        <HeadingContainer>
           <h2>Other sevices you must appreciate</h2>
           <p className="feature_para">
             Focus only on the meaning, we take care of the design. As soon as
             the meeting end you can export in one click into your preferred.
           </p>
-        </div>
+        </HeadingContainer>
 
         <FeaturesContainer >
           <ServiceCard

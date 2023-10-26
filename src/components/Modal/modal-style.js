@@ -8,8 +8,16 @@ export const ModalContainer = styled.div`
   z-index: 50;
 `;
 
+export const CenterWait  = styled.div`
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+`
+
 export const ModalBox = styled.div`
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 100;
   position: absolute;
   left: 50%;
@@ -17,19 +25,26 @@ export const ModalBox = styled.div`
   transform: translate(-50%, -50%);
   max-width: 600px;
   width: 90%;
-  padding: 1rem;
-  min-height: 400px;
+  height: 90%;
+  min-height: 300px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width:600px){
+     height : fit-content ;
+  }
 `;
 export const ModalHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 2rem;
+  padding:1rem;
+  background-color: #1e90ff;
+  color:white;
   align-items: center;
-  & > :first-child {
+  & > :first-child > h3 {
     font-size: 1.5rem;
     font-weight: bold;
   }
@@ -38,9 +53,8 @@ export const ModalHeader = styled.div`
 export const ModalMain = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 2rem 1rem;
   gap: 1.5rem;
-
   @media screen and (min-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -72,7 +86,7 @@ export const SubmitBtn = styled.button`
 export const Label = styled.label``;
 export const Input = styled.input`
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #3A4750;
   padding: 0 0.2rem;
   &:focus {
     outline: none;
@@ -81,7 +95,7 @@ export const Input = styled.input`
 
 export const Select = styled.select`
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #3A4750;
   &:focus {
     outline: none;
   }

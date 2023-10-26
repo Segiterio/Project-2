@@ -143,8 +143,9 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .overflow-hidden {

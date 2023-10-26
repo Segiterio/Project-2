@@ -7,9 +7,18 @@ export const LogoContainer = styled.div`
   gap: 0.4rem;
   font-weight: 700;
 
+  & > img {
+     width: 100px;
+     height: 71px;
+  }
+
   @media screen and (min-width:769px) {
     font-size: 1rem;
     gap: .8rem;
+    & > img  {
+       width: 120px;
+       height: 85px;
+    }
   }
 `;
 

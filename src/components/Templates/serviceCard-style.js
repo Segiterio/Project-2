@@ -4,7 +4,12 @@ export const LearnBtn = styled.button`
   color: #3183ff;
   font-size: 0.875rem;
   border: none;
-  background-color: transparent;
+  padding:.2rem .4rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  border-radius: 5px;
+  margin-top:.5rem;
 `;
 
 export const Card = styled.div`

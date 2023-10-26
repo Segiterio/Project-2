@@ -20,19 +20,7 @@ export const TeamMember = styled.div`
   }
 `;
 export const TeamStyle = styled.div`
-  .title {
-    font-weight: 700;
-    font-size: 25px;
-    @media (max-width: 920px) {
-      font-size: 18px;
-    }
-  }
-  .sub__title {
-    font-weight: 400;
-    font-size: 15px;
-    @media (max-width: 920px) {
-    }
-  }
+  padding-top: 2rem;
 `;
 export const Name = styled.div`
   font-size: 1.25rem;

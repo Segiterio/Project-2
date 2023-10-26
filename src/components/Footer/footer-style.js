@@ -8,6 +8,18 @@ export const FooterLogoContainer = styled.div`
   & p {
     font-size: 1.25rem;
   }
+
+  & > :first-child > img {
+     width: 100px;
+     height: 71px;
+  }
+
+  @media screen and (min-width: 769px){
+    & > :first-child > img {
+     width: 120px;
+     height: 85px;
+  }
+  }
 `;
 
 export const Copyright = styled.div`
@@ -36,20 +48,17 @@ export const FooterTitle = styled.div`
 `;
 
 export const FooterLinksContainer = styled.div`
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-flow: row;
+  gap: .5rem;
   color: #0f2137;
-  opacity: 0.8;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
 `;
 
 export const SocialLinks = styled.a`
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.4rem;
   text-decoration: none;
-  color:black;
-`;
+  transition: scale 150ms ease-in-out;
+  &:hover {
+     scale:1.1
+  }
+  `
