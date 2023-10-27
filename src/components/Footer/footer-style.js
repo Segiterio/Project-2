@@ -10,14 +10,14 @@ export const FooterLogoContainer = styled.div`
   }
 
   & > :first-child > img {
-     width: 100px;
-     height: 71px;
+     width: 120px;
+     height: 85px;
   }
 
   @media screen and (min-width: 769px){
     & > :first-child > img {
-     width: 120px;
-     height: 85px;
+      width: 180px;
+       height: 127px;
   }
   }
 `;
@@ -48,16 +48,16 @@ export const FooterTitle = styled.div`
 `;
 
 export const FooterLinksContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-auto-flow: row;
-  gap: .5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   color: #0f2137;
 `;
 
 export const SocialLinks = styled.a`
   text-decoration: none;
   transition: scale 150ms ease-in-out;
+  color:black;
   &:hover {
      scale:1.1
   }

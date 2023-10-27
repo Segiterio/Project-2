@@ -9,10 +9,9 @@ export const ModalContainer = styled.div`
 `;
 
 export const CenterWait  = styled.div`
-  display: flex;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
+  padding:2rem;
+  text-align: center;
+  font-size: 1.5rem;
   height: 200px;
 `
 
@@ -83,6 +82,18 @@ export const SubmitBtn = styled.button`
   cursor: pointer;
   width: fit-content;
 `;
+
+export const LoadingBtn = styled.div`
+  place-self: end;
+  padding: 0.4rem 0.8rem;
+  font-size: .875rem;
+  font-weight: 600;
+  color: white;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+`
 export const Label = styled.label``;
 export const Input = styled.input`
   border: none;

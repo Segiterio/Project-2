@@ -1,4 +1,5 @@
 const { ThanksMail } = require("../mail/Templates/ThanksMail");
+const { bookADemoMail } = require("../mail/Templates/mailToOwner");
 const mailSender = require("../utils/mailSender");
 
 exports.contactForm = async (req, res) => {
@@ -15,10 +16,17 @@ exports.contactForm = async (req, res) => {
     const mailRespose = await mailSender(
       email,
       "Thanks for fate",
-      ThanksMail()
+      ThanksMail(name,process.env.MAILUSER)
     );
 
-    // console.log(mailRespose);
+    const ownerMail = await mailSender(
+      process.env.MAILUSER,
+      `${name} book demo for web service`,
+      bookADemoMail(name, email, phone)
+    );
+
+    console.log("owner mail", ownerMail);
+    console.log("client mail", mailRespose);
     return res.status(200).json({
       success: true,
       message: "Your request is Received",

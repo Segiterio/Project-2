@@ -8,16 +8,16 @@ export const LogoContainer = styled.div`
   font-weight: 700;
 
   & > img {
-     width: 100px;
-     height: 71px;
+     width: 120px;
+     height: 85px;
   }
 
   @media screen and (min-width:769px) {
     font-size: 1rem;
     gap: .8rem;
     & > img  {
-       width: 120px;
-       height: 85px;
+       width: 180px;
+       height: 127px;
     }
   }
 `;

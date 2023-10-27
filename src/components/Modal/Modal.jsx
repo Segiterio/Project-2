@@ -10,7 +10,8 @@ import {
   Input,
   Select,
   Errors,
-  CenterWait
+  CenterWait,
+  LoadingBtn
 } from "./modal-style";
 import { RxCross2 } from "react-icons/rx";
 import { useForm } from "react-hook-form";
@@ -25,7 +26,7 @@ const Modal = ({ setModal }) => {
     register,
     formState: { errors },
   } = useForm();
-  const [status, setStatus] = useState("form");
+  const [status, setStatus] = useState("empty");
   const onSubmit = async (data) => {
     setStatus("submitting");
     console.log("Form data",data);
@@ -35,11 +36,11 @@ const Modal = ({ setModal }) => {
         data
       );
       console.log(res.data);
-     setStatus("form")
+     setStatus("submitted");
     } catch (error) {
       console.log("This error is on cantact submission form", error);
     }
-    setModal(false);
+   
   };
   const { countries } = CountryCodes;
   const { teams } = TeamData;
@@ -68,7 +69,7 @@ const Modal = ({ setModal }) => {
                 size={40}
               />
             </ModalHeader>
-           { status === "form" ? <ModalMain onSubmit={handleSubmit(onSubmit)}>
+           { status === "submitted" ? <CenterWait>Thank You We Received Your Request</CenterWait> : <ModalMain onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input
@@ -146,9 +147,11 @@ const Modal = ({ setModal }) => {
               </div>
 
               <BtnContainer>
-                <SubmitBtn type="submit">Submit</SubmitBtn>
+                {
+                 status === "submitting" ? <LoadingBtn >Loading...</LoadingBtn> : <SubmitBtn type="submit">Submit</SubmitBtn>
+                }
               </BtnContainer>
-            </ModalMain> :  <CenterWait>Please Wait...</CenterWait> }
+            </ModalMain> }
           </div>
       </ModalBox>
     </ModalContainer>

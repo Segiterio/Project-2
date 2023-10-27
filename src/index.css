@@ -147,6 +147,12 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+ 
+ footer > div:first-child  {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+ }
 
 .overflow-hidden {
    overflow-x: hidden;
@@ -161,6 +167,13 @@ footer {
   }
   h2 {
     font-size: 1.8rem;
+  }
+
+  footer > div:first-child {
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     gap:8rem;
   }
 }
 
