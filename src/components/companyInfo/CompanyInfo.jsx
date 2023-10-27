@@ -1,6 +1,5 @@
 import React from "react";
 import { Highlight, HighlightContainer } from "./companyInfo-style";
-import AnimatedNumbers from "react-animated-numbers";
 
 const CompanyInfo = () => {
   return (
@@ -9,14 +8,7 @@ const CompanyInfo = () => {
        
           <Highlight>
             <h2 className="stats">
-              <AnimatedNumbers
-                fontStyle={{fontSize:36}}
-                animateToNumber={100}
-                configs={(number, index) => {
-                  return { mass: 1, tension: 230 * (index + 1), friction: 140 };
-                }}
-              ></AnimatedNumbers>
-              <span>K</span>
+               100k
             </h2>
             <p className="title">Users</p>
           </Highlight>
@@ -30,14 +22,7 @@ const CompanyInfo = () => {
           
           <Highlight>
             <h2 className="stats">
-              <AnimatedNumbers
-               fontStyle={{fontSize:36}}
-                animateToNumber={70}
-                configs={(number, index) => {
-                  return { mass: 1, tension: 230 * (index + 1), friction: 140 };
-                }}
-              ></AnimatedNumbers>
-              <span>K</span>
+              70k
             </h2>
             <p className="title">Rating</p>
           </Highlight>

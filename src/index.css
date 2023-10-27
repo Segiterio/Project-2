@@ -45,11 +45,6 @@
   margin: 0 auto;
 }
 
-header {
-  justify-content: space-between;
-  padding: .5rem 0;
-  font-size: .875rem;
-}
 
 .vertically_center {
   display: flex;

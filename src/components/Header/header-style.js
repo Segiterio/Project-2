@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+
+export const Top = styled.header`
+  justify-content: space-between;
+  padding: .5rem .6rem;
+  font-size: .875rem;
+
+  @media screen and (min-width:769px) {
+  
+    padding: .5rem 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+`
+
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
@@ -28,7 +43,7 @@ export const MenuContainer = styled.nav`
     & {
       display: flex;
       align-items: center;
-      margin-left: 1.7rem;
+      margin-left: 3rem;
       gap: min(1.5rem, 2vw);
       cursor: pointer;
     }
@@ -38,41 +53,14 @@ export const MenuContainer = styled.nav`
       text-underline-offset: 0.2rem;
     }
   }
+  @media screen and (min-width: 1024px) {
+    & {
+      margin-left: 5rem;
+   
+    }
+  }
 `;
 
-// export const GetStaredBtn = styled.div`
-//   margin-left: 0.5rem;
-//   font-size: 0.8rem;
-//   color: var(--Green_gray);
-//   font-weight: 700;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-
-//   & > img {
-//     width: 100%;
-//     position: absolute;
-//     bottom: -0.4rem;
-//   }
-
-//   & > button {
-//     border: none;
-//     background-color: transparent;
-//   }
-
-//    @media screen and (min-width:769px) {
-//     font-size: 1rem;
-//     margin-left: 1rem;
-//    }
-// `;
-
-// export const LoginBtn = styled.button`
-//   border: none;
-//   background-color: transparent;
-//   font-weight: 500;
-//   font-size: 0.8rem;
-// `;
 
 export const BookDemoBtn = styled.div`
   padding:.3rem .6rem ;
