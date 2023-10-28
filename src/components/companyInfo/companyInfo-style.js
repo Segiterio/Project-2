@@ -6,17 +6,182 @@ export const HighlightContainer = styled.div`
   margin: 0 auto;
   padding: 2rem 0;
   place-items: center;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
-  gap:2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
   width: 90%;
 
-  @media screen and (min-width:769px){
-     grid-template-columns: repeat(4,1fr);
-     grid-template-rows: none;
+  @media screen and (min-width: 769px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
   }
 `;
 
+export const HighlightUsers = styled.div`
+  // @property --num {
+  //   syntax: "<integer>";
+  //   initial-value: 0;
+  //   inherits: false;
+  // }
+
+  // h2 {
+  //   transition: --num 5s;
+  //   counter-set: num var(--num);
+  //   font: 800 40px system-ui;
+  // }
+  // h2::after {
+  //   content: counter(num);
+  // }
+  // h2:hover {
+  //   --num: 20;
+  // }
+  .number__position {
+    display: flex;
+    gap: 2px;
+    align-item: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .stats {
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    color: #ff6666;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+  }
+  & > p {
+    font-size: 1rem;
+    color: gray;
+  }
+
+  @media screen and (min-width: 600px) {
+    & > h2 {
+      font-size: 1.5rem;
+    }
+    & > p {
+      font-size: 0.5rem;
+    }
+  }
+`;
+export const HighlightRating = styled.div`
+  // @property --num {
+  //   syntax: "<integer>";
+  //   initial-value: 0;
+  //   inherits: false;
+  // }
+
+  // h2 {
+  //   transition: --num 5s;
+  //   counter-set: num var(--num);
+  //   font: 800 40px system-ui;
+  // }
+  // h2::after {
+  //   content: counter(num);
+  // }
+  // h2:hover {
+  //   --num: 30;
+  // }
+  .number__position {
+    display: flex;
+    gap: 2px;
+    align-item: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .stats {
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    color: #ff6666;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+  }
+  & > p {
+    font-size: 1rem;
+    color: gray;
+  }
+
+  @media screen and (min-width: 600px) {
+    & > h2 {
+      font-size: 1.5rem;
+    }
+    & > p {
+      font-size: 0.5rem;
+    }
+  }
+`;
+export const HighlightFaces = styled.div`
+  // @property --num {
+  //   syntax: "<integer>";
+  //   initial-value: 0;
+  //   inherits: false;
+  // }
+
+  // h2 {
+  //   transition: --num 5s;
+  //   counter-set: num var(--num);
+  //   font: 800 40px system-ui;
+  // }
+  // h2::after {
+  //   content: counter(num);
+  // }
+  // h2:hover {
+  //   --num: 50;
+  // }
+  .number__position {
+    display: flex;
+    gap: 2px;
+    align-item: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .stats {
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    color: #ff6666;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+  }
+  & > p {
+    font-size: 1rem;
+    color: gray;
+  }
+
+  @media screen and (min-width: 600px) {
+    & > h2 {
+      font-size: 1.5rem;
+    }
+    & > p {
+      font-size: 0.5rem;
+    }
+  }
+`;
 export const Highlight = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,7 +192,7 @@ export const Highlight = styled.div`
     font-size: 36px;
     font-weight: 700;
     display: flex;
-    gap:.2rem;
+    gap: 0.2rem;
     align-items: center;
     color: #ff6666;
   }
@@ -35,7 +200,6 @@ export const Highlight = styled.div`
     font-weight: 700;
     font-size: 16px;
     color: black;
-
   }
   & > p {
     font-size: 1rem;
