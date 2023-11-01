@@ -1,5 +1,10 @@
 import styled from "styled-components";
-
+export const FooterStyle = styled.div`
+  margin-top: 20px;
+  @media (max-width: 920px) {
+    margin-top: 0px;
+  }
+`;
 export const FooterLogoContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,15 +15,15 @@ export const FooterLogoContainer = styled.div`
   }
 
   & > :first-child > img {
-     width: 120px;
-     height: 85px;
+    width: 120px;
+    height: 85px;
   }
 
-  @media screen and (min-width: 769px){
+  @media screen and (min-width: 769px) {
     & > :first-child > img {
-      width: 180px;
-       height: 127px;
-  }
+      width: 160px;
+      height: 110px;
+    }
   }
 `;
 
@@ -34,7 +39,7 @@ export const Privacy = styled.div`
 export const FooterTitle = styled.div`
   flex-grow: 1;
   font-size: 1rem;
-  font-size: 900;
+  font-weight: 700;
   font-family: "DM sans";
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -42,8 +47,10 @@ export const FooterTitle = styled.div`
   white-space: nowrap;
 
   &:hover {
-     text-decoration: underline;
-     text-underline-offset:4px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: red;
+    cursor: pointer;
   }
 `;
 
@@ -52,13 +59,14 @@ export const FooterLinksContainer = styled.div`
   gap: 1rem;
   flex-wrap: wrap;
   color: #0f2137;
+  margin-right: 15px;
 `;
 
 export const SocialLinks = styled.a`
   text-decoration: none;
   transition: scale 150ms ease-in-out;
-  color:black;
+  color: black;
   &:hover {
-     scale:1.1
+    scale: 1.1;
   }
-  `
+`;

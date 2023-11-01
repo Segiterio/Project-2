@@ -4,12 +4,16 @@ export const Container = styled.div`
   background-color: #1e90ff;
   padding: 5rem 0;
   position: relative;
+  @media (max-width: 920px) {
+    padding: 2rem 0 14rem 0;
+  }
 `;
 
 export const ContentContainer = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
-  width: 95%;
+  // margin: 0 auto;
+  margin-left: 50px;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +25,7 @@ export const ContentContainer = styled.div`
   position: relative;
   gap: 2rem;
 
-  @media screen and (min-width: 769px) {
+  @media (min-width: 920px) {
     flex-direction: row;
     padding: 1.5rem;
   }

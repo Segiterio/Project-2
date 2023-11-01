@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
   ModalBox,
   ModalContainer,
@@ -11,7 +11,7 @@ import {
   Select,
   Errors,
   CenterWait,
-  LoadingBtn
+  LoadingBtn,
 } from "./modal-style";
 import { RxCross2 } from "react-icons/rx";
 import { useForm } from "react-hook-form";
@@ -29,18 +29,17 @@ const Modal = ({ setModal }) => {
   const [status, setStatus] = useState("empty");
   const onSubmit = async (data) => {
     setStatus("submitting");
-    console.log("Form data",data);
+    console.log("Form data", data);
     try {
       const res = await axios.post(
         "http://localhost:4000/api/v1/contact",
         data
       );
       console.log(res.data);
-     setStatus("submitted");
+      setStatus("submitted");
     } catch (error) {
       console.log("This error is on cantact submission form", error);
     }
-   
   };
   const { countries } = CountryCodes;
   const { teams } = TeamData;
@@ -55,21 +54,24 @@ const Modal = ({ setModal }) => {
           e.stopPropagation();
         }}
       >
-          <div>
-            <ModalHeader>
-              <div>
-                <h3>Book Demo Form</h3>
-                <p>Contact us today , and get a reply in 24hrs</p>
-              </div>
-              <RxCross2
-                onClick={() => {
-                  setModal(false);
-                }}
-                className="cross"
-                size={40}
-              />
-            </ModalHeader>
-           { status === "submitted" ? <CenterWait>Thank You We Received Your Request</CenterWait> : <ModalMain onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <ModalHeader>
+            <div>
+              <h3>Book Demo Form</h3>
+              <p>Contact us today , and get a reply in 24hrs</p>
+            </div>
+            <RxCross2
+              onClick={() => {
+                setModal(false);
+              }}
+              className="cross"
+              size={25}
+            />
+          </ModalHeader>
+          {status === "submitted" ? (
+            <CenterWait>Thank You We Received Your Request</CenterWait>
+          ) : (
+            <ModalMain onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input
@@ -147,12 +149,15 @@ const Modal = ({ setModal }) => {
               </div>
 
               <BtnContainer>
-                {
-                 status === "submitting" ? <LoadingBtn >Loading...</LoadingBtn> : <SubmitBtn type="submit">Submit</SubmitBtn>
-                }
+                {status === "submitting" ? (
+                  <LoadingBtn>Loading...</LoadingBtn>
+                ) : (
+                  <SubmitBtn type="submit">Submit</SubmitBtn>
+                )}
               </BtnContainer>
-            </ModalMain> }
-          </div>
+            </ModalMain>
+          )}
+        </div>
       </ModalBox>
     </ModalContainer>
   );

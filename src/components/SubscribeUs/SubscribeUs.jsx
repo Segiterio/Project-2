@@ -4,9 +4,18 @@ import Vector from "../../Assets/decoration/Vector.svg";
 import Group_1 from "../../Assets/decoration/Group_1.svg";
 import Group_2 from "../../Assets/decoration/Group_2.svg";
 import Group_73 from "../../Assets/decoration/Group_73.svg";
-import { Container, Strips1, Strips2,ContentContainer,Books,Ballons,Cactus,SubscribeBtn } from "./subscribeUs-style";
+import {
+  Container,
+  Strips1,
+  Strips2,
+  ContentContainer,
+  Books,
+  Ballons,
+  Cactus,
+  SubscribeBtn,
+} from "./subscribeUs-style";
 
-const SubscribeUs = ({setModal}) => {
+const SubscribeUs = ({ setModal }) => {
   return (
     <Container>
       <ContentContainer>
@@ -17,16 +26,20 @@ const SubscribeUs = ({setModal}) => {
             joining our business
           </div>
         </div>
-        <SubscribeBtn onClick={() => {
-           setModal(true)
-        }}>Book Your Demo</SubscribeBtn>
+        <SubscribeBtn
+          onClick={() => {
+            setModal(true);
+          }}
+        >
+          Book Your Demo
+        </SubscribeBtn>
       </ContentContainer>
 
       <Books src={Group_73} alt="" className="books" />
-      <Strips1 src={Group_1} alt="" className="strips1" />
-      <Cactus src={Group_2} alt="" className="cactus" />
-      <Ballons src={Group} alt="" className="ballon" />
-      <Strips2 src={Vector} alt="" className="strips2" />
+      {/* <Strips1 src={Group_1} alt="" className="strips1" /> */}
+      {/* <Cactus src={Group_2} alt="" className="cactus" /> */}
+      {/* <Ballons src={Group} alt="" className="ballon" /> */}
+      {/* <Strips2 src={Vector} alt="" className="strips2" /> */}
     </Container>
   );
 };

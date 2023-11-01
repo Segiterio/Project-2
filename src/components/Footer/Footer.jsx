@@ -7,6 +7,7 @@ import {
   FooterTitle,
   SocialLinks,
   FooterLinksContainer,
+  FooterStyle,
 } from "./footer-style";
 
 import { AiFillFacebook, AiFillTwitterCircle } from "react-icons/ai";
@@ -18,18 +19,18 @@ const Footer = () => {
     <footer>
       <div>
         <FooterLogoContainer>
-          <div className="vertically_center ">
+          <div className="vertically_center">
             <img src={BrandLogo} alt="brandLogo" />
           </div>
           <Privacy>Terms of use | Privacy</Privacy>
           <Copyright>Copyright by 2019 YourName, Inc</Copyright>
         </FooterLogoContainer>
-        <div>
+        <FooterStyle>
           <FooterTitle>Home</FooterTitle>
-          <FooterTitle>Adverties</FooterTitle>
-          <FooterTitle>Supports</FooterTitle>
-          <FooterTitle>About</FooterTitle>
-        </div>
+          <FooterTitle>About us</FooterTitle>
+          <FooterTitle>Our Services</FooterTitle>
+          <FooterTitle>Success Stories</FooterTitle>
+        </FooterStyle>
       </div>
       <div>
         <FooterLinksContainer>
