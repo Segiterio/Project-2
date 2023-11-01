@@ -2,7 +2,10 @@ import React from "react";
 // import Logo from "../../Assets/Logo.png";
 import BrandLogo from "../../Assets/brandlogo.png";
 import { LogoContainer, MenuContainer, BookDemoBtn, Top } from "./header-style";
+import { useContext } from "react";
+import AppContextProvider, { AppContext } from "../../context/headerContext";
 const Header = ({ setModal }) => {
+  const { scrollId, setScrollId } = useContext(AppContext);
   return (
     <Top className="vertically_center">
       <div className="vertically_center">
@@ -10,10 +13,10 @@ const Header = ({ setModal }) => {
           <img src={BrandLogo} alt="s1image" />
         </LogoContainer>
         <MenuContainer>
-          <div>Home</div>
-          <div>About us</div>
-          <div>Our Services</div>
-          <div>Success Stories</div>
+          <div onClick={() => setScrollId("hero-page")}>Home</div>
+          <div onClick={() => setScrollId("why-choose")}>About us</div>
+          <div onClick={() => setScrollId("other-services")}>Our Services</div>
+          <div onClick={() => setScrollId("our-team")}>Success Stories</div>
         </MenuContainer>
       </div>
 
