@@ -35,6 +35,7 @@ const Home = () => {
       <a onClick={() => scrollToSection("company-info")}>
         Go to Company Info Section
       </a> */}
+      <h1></h1>
       {modal && <Modal setModal={setModal} />}
       <Header setModal={setModal} />
       <div id="hero-page">
