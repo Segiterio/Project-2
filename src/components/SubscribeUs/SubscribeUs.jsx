@@ -1,17 +1,17 @@
 import React from "react";
-import Group from "../../Assets/decoration/Group.svg";
-import Vector from "../../Assets/decoration/Vector.svg";
-import Group_1 from "../../Assets/decoration/Group_1.svg";
-import Group_2 from "../../Assets/decoration/Group_2.svg";
+// import Group from "../../Assets/decoration/Group.svg";
+// import Vector from "../../Assets/decoration/Vector.svg";
+// import Group_1 from "../../Assets/decoration/Group_1.svg";
+// import Group_2 from "../../Assets/decoration/Group_2.svg";
 import Group_73 from "../../Assets/decoration/Group_73.svg";
 import {
   Container,
-  Strips1,
-  Strips2,
+  // Strips1,
+  // Strips2,
   ContentContainer,
   Books,
-  Ballons,
-  Cactus,
+  // Ballons,
+  // Cactus,
   SubscribeBtn,
 } from "./subscribeUs-style";
 

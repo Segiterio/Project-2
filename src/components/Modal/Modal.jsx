@@ -16,11 +16,15 @@ import {
 import { RxCross2 } from "react-icons/rx";
 import { useForm } from "react-hook-form";
 import CountryCodes from "../../data/countryCode/codes.json";
-
 import TeamData from "../../data/team.json";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
+// import axios from "axios";
+
+// send the message and get a callback with an error or details of the message that was sent
 
 const Modal = ({ setModal }) => {
+  console.log( process.env.REACT_APP_EMAIL_SERVICE_ID,
+    process.env.REACT_APP_CLIENT_TEMPLATE,process.env.REACT_APP_EMAIL_KEY)
   const {
     handleSubmit,
     register,
@@ -31,11 +35,25 @@ const Modal = ({ setModal }) => {
     setStatus("submitting");
     console.log("Form data", data);
     try {
-      const res = await axios.post(
-        "http://localhost:4000/api/v1/contact",
-        data
+      const clientData = {
+        name: data.name,
+        email: data.email,
+      };
+      const resultClient = await emailjs.send(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_CLIENT_TEMPLATE,
+        clientData,
+        process.env.REACT_APP_EMAIL_KEY
       );
-      console.log(res.data);
+      // console.log("client response", resultClient.text);
+
+      const resultCompany = await emailjs.send(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_OWNER_TEMPLATE,
+        data,
+        process.env.REACT_APP_EMAIL_KEY
+      );
+      // console.log("company response", resultCompany.text);
       setStatus("submitted");
     } catch (error) {
       console.log("This error is on cantact submission form", error);
