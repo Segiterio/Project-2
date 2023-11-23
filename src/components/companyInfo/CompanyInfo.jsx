@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Highlight,
   HighlightContainer,
   HighlightFaces,
   HighlightRating,
@@ -12,21 +11,22 @@ const CompanyInfo = () => {
   const componentRef = useRef(null);
   const [countUsers, setCountUsers] = useState(0);
   const [rating, setRating] = useState(0);
-  const [happyFaces, setHappyFaces] = useState(0);
+  const [skillsLab, setSkillsLab] = useState(0);
+  const [partnerCollege, setPartnerCollege] = useState(0);
   useEffect(() => {
     let observer;
 
     const increaseUserNumber = () => {
       let number = 0;
       const interval = setInterval(() => {
-        if (number < 11) {
+        if (number < 3) {
           // Adjust this to your desired final number
           setCountUsers(number);
           number++;
         } else {
           clearInterval(interval);
         }
-      }, 100);
+      }, 10);
     };
     const increseRatingNumber = () => {
       let number = 0;
@@ -43,9 +43,21 @@ const CompanyInfo = () => {
     const increaseHappyNumber = () => {
       let number = 0;
       const interval = setInterval(() => {
-        if (number < 31) {
+        if (number < 7) {
           // Adjust this to your desired final number
-          setHappyFaces(number);
+          setSkillsLab(number);
+          number++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 100);
+    };
+    const increasePartnerCollege = () => {
+      let number = 0;
+      const interval = setInterval(() => {
+        if (number < 6) {
+          // Adjust this to your desired final number
+          setPartnerCollege(number);
           number++;
         } else {
           clearInterval(interval);
@@ -58,6 +70,7 @@ const CompanyInfo = () => {
           increaseUserNumber();
           increseRatingNumber();
           increaseHappyNumber();
+          increasePartnerCollege();
           observer.unobserve(entry.target);
         }
       });
@@ -74,7 +87,7 @@ const CompanyInfo = () => {
     };
   }, []);
   return (
-    <>
+    <div style={{backgroundColor:"#eee"}}>
       <HighlightContainer ref={componentRef}>
         <HighlightUsers className="highlightUsers">
           <div className="number__position">
@@ -83,11 +96,13 @@ const CompanyInfo = () => {
           </div>
           <p className="title">Users</p>
         </HighlightUsers>
+        <HighlightUsers className="highlightUsers">
+          <div className="number__position">
+            <h2 className="stats">{partnerCollege}</h2>
+          </div>
+          <p className="title">Partner Colleges</p>
+        </HighlightUsers>
 
-        <Highlight>
-          <h2 className="stats">24*7</h2>
-          <p className="title">Support</p>
-        </Highlight>
 
         <HighlightRating>
           <div className="number__position">
@@ -99,13 +114,12 @@ const CompanyInfo = () => {
 
         <HighlightFaces>
           <div className="number__position">
-            <h2 className="stats">{happyFaces}</h2>
-            <div className="stats">k</div>
+            <h2 className="stats">{skillsLab}</h2>
           </div>
-          <p className="title">Happy faces</p>
+          <p className="title">Skills Lab</p>
         </HighlightFaces>
       </HighlightContainer>
-    </>
+    </div>
   );
 };
 

@@ -1,71 +1,70 @@
 import React from "react";
-import Meter from "../../Assets/meter.png";
-import InfinityIcon from "../../Assets/infinity.png";
-import Layer from "../../Assets/layer.png";
-import Lego from "../../Assets/lego.png";
-import Link from "../../Assets/link.png";
-import Vertical_bars from "../../Assets/vertical_bars.png";
-import ServiceCard from "../Templates/ServiceCard";
+import CourseCard from "../Templates/CourseCard";
 import { OtherServicesContainer,FeaturesContainer,HeadingContainer } from "./Index-style";
+import { Title,SubHeading } from "../MainServices/index-style";
+import JavaImage from "../../Assets/CourseImages/Java.jpeg"
+import CloudComputing from "../../Assets/CourseImages/cloud.jpg"
+import DevOps from "../../Assets/CourseImages/Devops.jpeg"
+import DataAnalitics from "../../Assets/CourseImages/data.jpg"
+import Interview from "../../Assets/CourseImages/Interview.jpeg"
+import CyberSecurity from "../../Assets/CourseImages/cyper.jpg"
+
 
 const Index = () => {
   return (
-    <OtherServicesContainer>
+    <OtherServicesContainer className="backImage">
       <div className="content_area">
         <HeadingContainer>
-          <h2>Other sevices you must appreciate</h2>
-          <p className="feature_para">
-            Focus only on the meaning, we take care of the design. As soon as
-            the meeting end you can export in one click into your preferred.
-          </p>
+          <Title color={""}>Courses We Offer</Title>
+          <SubHeading color={""} className="feature_para">
+            Focus only on the meaning, we take care of the design
+          </SubHeading>
         </HeadingContainer>
 
         <FeaturesContainer >
-          <ServiceCard
-            Image={Layer}
-            title={"3D modeling & art"}
-            para={
-              " Get your info tests delivered at home collect a sample from the your pogress tests."
+          <CourseCard
+            Image={DevOps}
+            title={"DevOps"}
+            para={"Skill Ladder Academy’s DevOps training is designed for students who want to become successful DevOps engineers. In this DevOps training you will dive through the  concepts of DevOps. This training in DevOps has helped students effectively learn DevOps."
             }
             isContentLarge={true}
           />
-          <ServiceCard
-            Image={Link}
-            title={"Digital promotion"}
+          <CourseCard
+            Image={JavaImage}
+            title={"Java and Dot Net Full stack Development"}
             para={
-              "Get your info tests delivered at home collect a sample from the your pogress tests."
+              "Skill Ladder Academy’s Java and Dot Net Full Stack Developer program provides extensive hands-on training in Front End, Middleware and Back End Technology skills and capstone projects. "
             }
             isContentLarge={true}
           />
-          <ServiceCard
-            Image={Lego}
-            title={"Business Enterprise"}
+          <CourseCard
+            Image={CloudComputing}
+            title={"Cloud Computing"}
             para={
-              "Get your info tests delivered at home collect a sample from the your pogress tests."
+              "Skill Ladder Academy’s Cloud Computing program helps you become an expert in AWS. The indepth course lets you learn the key architectural principles of Cloud and skills need to become a Cloud Architect."}
+            isContentLarge={true}
+          />
+          <CourseCard
+            Image={CyberSecurity}
+            title={"Cybersecurity"}
+            para={
+              "Skill Ladder Academy’s Cybersecurity Training will provide the information security skills and tools  you need to protect and secure the critical information and technology assests. The cybersecurity training is mapped to the Industry roles of Information Security Analyst, Ethical Hacker, Security Architect "
             }
             isContentLarge={true}
           />
-          <ServiceCard
-            Image={Meter}
-            title={"Marketing & advertising"}
+          <CourseCard
+            Image={DataAnalitics}
+            title={"Data Analytics"}
             para={
-              "Get your info tests delivered at home collect a sample from the your pogress tests."
+              "Skill Ladder Academy’s Data Analytics Program covers Excel, Advanced Excel, Tableau, SQL, Power BI, Basics of R & Python. The Skills covered are Database Concepts, Data Analysis Concepts, Functions, Charters and Slicers, Data Visualization. The training prepares the candidate for the Data Analyst role of the industry. "
             }
             isContentLarge={true}
           />
-          <ServiceCard
-            Image={InfinityIcon}
-            title={"Ultimate development"}
+          <CourseCard
+            Image={Interview}
+            title={"Interview Preparation"}
             para={
-              "Get your info tests delivered at home collect a sample from the your pogress tests."
-            }
-            isContentLarge={true}
-          />
-          <ServiceCard
-            Image={Vertical_bars}
-            title={"Online support"}
-            para={
-              "Get your info tests delivered at home collect a sample from the your pogress tests."
+              "Skill Ladder Academy’s Interview Preparation curriculum is developed by Industry Experts. The training is industry focused and covers topics on C, Data Structures, Algorithms, SQL, Aptitude and Problem Solving. It includes Mock Interviews, Periodic Assessments and mentoring for the candidates."
             }
             isContentLarge={true}
           />

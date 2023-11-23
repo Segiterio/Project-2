@@ -2,15 +2,10 @@ import styled from "styled-components";
 
 
 export const HeadingContainer = styled.div`
-  color:white
-`
-export const OtherServicesContainer = styled.section`
-  background-color: #ff6666;
-  padding: 2rem 0;
+`;
 
-  @media screen and (min-width: 769px) {
-    padding: 4rem 0;
-  }
+export const OtherServicesContainer = styled.section`
+  padding: 2.5rem 0;
 `;
 
 export const FeaturesContainer = styled.div`
@@ -23,10 +18,14 @@ export const FeaturesContainer = styled.div`
   margin: 1.5rem 0;
 
   @media screen and (min-width: 769px) {
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
     column-gap: 1.5rem;
-    row-gap: 4.5rem;
-    margin: 3rem 0;
+    row-gap: 3rem;
+  }
+
+  @media screen and (min-width:1025px){
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: 1fr 1fr;
   }
 `;

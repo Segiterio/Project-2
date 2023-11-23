@@ -30,10 +30,10 @@ const Hero = ({ setModal }) => {
       <div className="element">
         <div>
           <h1 className="element__heading">
-            Creativity starts with viewing the whole world differently
+            Developing Skills for the Future of Work!
           </h1>
           <p className="element__subheading">
-            A service agency with customer satisfaction
+            Creating a Workforce for the Future!
           </p>
         </div>
         <button

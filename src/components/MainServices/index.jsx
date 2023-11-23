@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import ServiceCard from "../Templates/ServiceCard";
 import Printer from "../../Assets/printer.png";
 import InfinityIcon from "../../Assets/infinity.png";
 import Meter from "../../Assets/meter.png";
@@ -9,9 +8,25 @@ import {
   Quote,
   CardsContainer,
   MainServicesContainer,
+  Title,
+  SubHeading,
+  MainServiceCard 
 } from "./index-style";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+export const Card = ({ Image, title, para }) => {
+  return (
+    <MainServiceCard>
+      <img src={Image} alt="meter" />
+      <div className="card_details">
+        <h3>{title}</h3>
+        <p>{para}</p>
+      </div>
+    </MainServiceCard>
+  );
+};
+
 const Index = () => {
   const componentRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -52,38 +67,37 @@ const Index = () => {
       {/* <!-- services --> */}
       <div className="content_area">
         <div>
-          <h2>Grow your startup with our Service</h2>
-          <p>
-            Build an incredible workplace and grow your business with Gusto's
-            all-in-one platform with amazing contents.
-          </p>
+          <Title color={"white"}>What We Do</Title>
+          <SubHeading color={"white"}>
+          Build an incredible skill and be part of the future workforce.
+          </SubHeading>
         </div>
         <CardsContainer>
           <div className="item" data-aos="fade-right">
-            <ServiceCard
+            <Card
               Image={Meter}
-              title={"Marketing & advertising"}
+              title={"Technology Training"}
               para={
-                "Get your info tests delivered at home collect a sample from the your pogress tests."
+                "The rate of technological change is swift. We provide technology training in the areas of Devops, AI, Cloud, CRM, Cyber Security, Data Analytics, Programming Languages which provide positive learning outcomes for the UG/PG Students of Colleges."
               }
             />
           </div>
           <div data-aos="fade-down">
-            <ServiceCard
+            <Card
               Image={InfinityIcon}
-              title={"Ultimate development"}
+              title={"Soft Skills Training"}
               para={
-                "Get your info tests delivered at home collect a sample from the your pogress tests."
+                "We provide Soft Skills training on Communication, Creativity, Critical Thinking, Goal Setting, Leadership, Multitasking, Problem Solving, Stress Management, Personality Development, Group Discussion Prep and Interview Preparation to prepare the students for their dream job."
               }
               data-aos="fade-up"
             />
           </div>
           <div className="item" data-aos="fade-left">
-            <ServiceCard
+            <Card
               Image={Printer}
-              title={"Business Enterprise"}
+              title={"Assessment and Certification"}
               para={
-                "Get your info tests delivered at home collect a sample from the your pogress tests."
+                "Certification provides the candidate and the recruiter an assured standard of proficiency. On successful completion of the training the candidate will provided with assessment and certification. Our certifications are recognized by the employers and demonstrate the proficiency of the candidate."
               }
               data-aos="fade-right"
             />
@@ -94,9 +108,7 @@ const Index = () => {
       <QuoteContainer className="content_area">
         <div>
           <Quote>
-            “Whatever we create in Qwilr looks absolutely brilliant. It helps
-            show our work in the best light, and is downright impressive when
-            clients see a Qwilr Page we have made for them.”
+            “Our mission is to deliver innovative, value-driven, and flexible training solutions,   skills and knowledge that is aligned to the employment opportunities in the industry, thereby enhancing their contributions to the goals of the nation.”
           </Quote>
           <Writer className="writer">By Denny Albuz, Adviser of Paypal</Writer>
         </div>
