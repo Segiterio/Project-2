@@ -20,7 +20,7 @@ export const Title = styled.div`
   border-bottom: 4px solid ${({ $active }) => ($active ? "#1e90ff" : "white")};
  transition: border-bottom 150ms ease-in-out;
   &:hover {
-     border-bottom:4px solid ${({ $active }) => ($active ? "null" : "red")};
+     border-bottom:4px solid ${({ $active }) => ($active ? "null" : "#1e90ff99")};
   }
 `;
 

@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
-
+import { Title } from "../MainServices/index-style";
 import {
   AiFillFacebook,
   AiFillTwitterCircle,
@@ -27,7 +27,7 @@ const Team = () => {
     <TeamStyle>
       <section className="content_area">
         <div>
-          <h2>Meet our superheros</h2>
+          <Title>Meet our superheros</Title>
           <p>
             Build an incredible workplace and grow your business with Gusto's
             all-in-one platform with amazing contents.

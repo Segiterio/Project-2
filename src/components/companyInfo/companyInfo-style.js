@@ -58,6 +58,7 @@ export const HighlightUsers = styled.div`
     font-weight: 700;
     font-size: 1.5rem;
     color: black;
+    text-align: center;
   }
   & > p {
     font-size: 1rem;
@@ -74,23 +75,6 @@ export const HighlightUsers = styled.div`
   }
 `;
 export const HighlightRating = styled.div`
-  // @property --num {
-  //   syntax: "<integer>";
-  //   initial-value: 0;
-  //   inherits: false;
-  // }
-
-  // h2 {
-  //   transition: --num 5s;
-  //   counter-set: num var(--num);
-  //   font: 800 40px system-ui;
-  // }
-  // h2::after {
-  //   content: counter(num);
-  // }
-  // h2:hover {
-  //   --num: 30;
-  // }
   .number__position {
     display: flex;
     gap: 2px;
@@ -129,23 +113,6 @@ export const HighlightRating = styled.div`
   }
 `;
 export const HighlightFaces = styled.div`
-  // @property --num {
-  //   syntax: "<integer>";
-  //   initial-value: 0;
-  //   inherits: false;
-  // }
-
-  // h2 {
-  //   transition: --num 5s;
-  //   counter-set: num var(--num);
-  //   font: 800 40px system-ui;
-  // }
-  // h2::after {
-  //   content: counter(num);
-  // }
-  // h2:hover {
-  //   --num: 50;
-  // }
   .number__position {
     display: flex;
     gap: 2px;

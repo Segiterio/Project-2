@@ -10,8 +10,6 @@ export const Card = styled.div`
      scale: 1.04;
      box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3);
   }
-
-  border:1px solid #818FB499;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -23,10 +21,8 @@ export const Card = styled.div`
     
     overflow:hidden;
     & > img {
-      border:1px solid #818FB499;
-      border-radius:10px;
-      width: 340px;
-      height: 220px;
+      width: 100%;
+      height: 240px;
       object-fit: cover;
     }
   }
@@ -58,7 +54,7 @@ export const Content = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.725rem;

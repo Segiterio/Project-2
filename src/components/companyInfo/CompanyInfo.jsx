@@ -87,7 +87,7 @@ const CompanyInfo = () => {
     };
   }, []);
   return (
-    <div style={{backgroundColor:"#eee"}}>
+    <div>
       <HighlightContainer ref={componentRef}>
         <HighlightUsers className="highlightUsers">
           <div className="number__position">

@@ -1,6 +1,6 @@
 import React from "react";
 import CourseCard from "../Templates/CourseCard";
-import { OtherServicesContainer,FeaturesContainer,HeadingContainer } from "./Index-style";
+import { CourseSection,FeaturesContainer,HeadingContainer } from "./Index-style";
 import { Title,SubHeading } from "../MainServices/index-style";
 import JavaImage from "../../Assets/CourseImages/Java.jpeg"
 import CloudComputing from "../../Assets/CourseImages/cloud.jpg"
@@ -12,7 +12,7 @@ import CyberSecurity from "../../Assets/CourseImages/cyper.jpg"
 
 const Index = () => {
   return (
-    <OtherServicesContainer className="backImage">
+    <CourseSection className="backImage">
       <div className="content_area">
         <HeadingContainer>
           <Title color={""}>Courses We Offer</Title>
@@ -70,7 +70,7 @@ const Index = () => {
           />
         </FeaturesContainer>
       </div>
-    </OtherServicesContainer>
+    </CourseSection>
   );
 };
 

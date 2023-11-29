@@ -104,17 +104,7 @@ const Index = () => {
           </div>
         </CardsContainer>
       </div>
-      {/* <!-- quote container --> */}
-      <QuoteContainer className="content_area">
-        <div>
-          <Quote>
-            “Our mission is to deliver innovative, value-driven, and flexible training solutions,   skills and knowledge that is aligned to the employment opportunities in the industry, thereby enhancing their contributions to the goals of the nation.”
-          </Quote>
-          <Writer className="writer">By Denny Albuz, Adviser of Paypal</Writer>
-        </div>
-      </QuoteContainer>
-      {/* <!-- logos container --> */}
-      {/* <Partners /> */}
+
     </MainServicesContainer>
   );
 };

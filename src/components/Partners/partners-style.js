@@ -2,7 +2,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 
 export const  Wrapper = styled.div`
-  margin:5rem 0;
+ padding:2rem 0;
 `  
 
 export const scroll_horizontal = keyframes`
@@ -20,10 +20,11 @@ export const PartnersContainer = styled.div`
   z-index: 50;
   position: relative;
   justify-content: center;
-  animation: ${scroll_horizontal} 10s linear infinite;
+  animation: ${scroll_horizontal} 15s linear infinite;
   width: max-content;
 `;
 
 export const LogoOfPartner = styled.img`
   display: inline-block;
+  width: 200px;
 `;

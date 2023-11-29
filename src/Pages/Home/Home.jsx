@@ -1,19 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header/Header.jsx";
-import { Router, Route } from "react-router-dom";
 import Hero from "../../components/Hero/Hero.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import MainServices from "../../components/MainServices/index.jsx";
 import OurTeam from "../../components/OurTeam/Team.jsx";
-import OtherServices from "../../components/OtherServices/Index.jsx";
+import Courses from "../../components/Courses/Index.jsx"
 import WhyChooseUs from "../../components/WhyChooseUs/index.jsx";
-// import Blogs from "../../components/Blogs/Blogs.jsx";
 import SubscribeUs from "../../components/SubscribeUs/SubscribeUs";
 import Partners from "../../components/Partners/Partners.jsx";
 import Modal from "../../components/Modal/Modal.jsx";
 import CompanyInfo from "../../components/companyInfo/CompanyInfo.jsx";
-import { Link } from "react-router-dom";
 import { AppContext } from "../../context/headerContext.js";
+import Quote from "../../components/Quote/index.js";
 const Home = () => {
   const [modal, setModal] = useState(false);
   const { scrollId, setScrollId } = useContext(AppContext);
@@ -47,19 +45,19 @@ const Home = () => {
       <div id="company-info">
         <CompanyInfo />
       </div>
+      <Quote/>
       <div id="our-team">
         <OurTeam />
       </div>
       <div id="partners">
         <Partners />
       </div>
-      <div id="other-services">
-        <OtherServices />
+      <div id="courses">
+        <Courses />
       </div>
       <div id="why-choose">
         <WhyChooseUs />
       </div>
-      {/* <Blogs /> */}
       <div id="contact-us">
         <SubscribeUs setModal={setModal} />
       </div>

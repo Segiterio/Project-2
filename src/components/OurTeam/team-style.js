@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const TeamMember = styled.div`
-  padding: 0.5rem;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@ export const TeamMember = styled.div`
   }
 `;
 export const TeamStyle = styled.div`
-  padding-top: 2rem;
+  padding: 2rem 0;
 `;
 export const Name = styled.div`
   font-size: 1.25rem;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const HeadingContainer = styled.div`
 `;
 
-export const OtherServicesContainer = styled.section`
+export const CourseSection = styled.section`
   padding: 2.5rem 0;
 `;
 
